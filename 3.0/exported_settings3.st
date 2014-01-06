@@ -14,6 +14,7 @@ StartupLoader default executeAtomicItems: {
 	StartupAction name: 'Direction' code: '(Smalltalk at: #PolymorphSystemSettings) perform: #desktopGradientDirection: with: (#Vertical)' runOnce: true.
 	StartupAction name: 'Origin' code: '(Smalltalk at: #PolymorphSystemSettings) perform: #desktopGradientOrigin: with: (#topLeft)' runOnce: true.
 	StartupAction name: 'Desktop background image file name' code: '(Smalltalk at: #PolymorphSystemSettings) perform: #desktopImageFileName: with: ('''')' runOnce: true.
+	"StartupAction name: 'Sound' code: '((Smalltalk at: #SoundSystem) perform: #current) perform: #soundEnabled: with: (false)' runOnce: true."
 	StartupAction name: 'Use theme sounds' code: '(Smalltalk at: #SoundTheme) perform: #useThemeSounds: with: (true)' runOnce: true.
 	StartupAction name: 'Sound theme' code: '(Smalltalk at: #PolymorphSystemSettings) perform: #soundThemeClass: with: (NullSoundTheme)' runOnce: true.
 	StartupAction name: 'Cascaded message inside parentheses' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #cascadedMessageInsideParentheses: with: (false)' runOnce: true.
@@ -22,7 +23,9 @@ StartupLoader default executeAtomicItems: {
 	StartupAction name: 'Indents for keywords' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #indentsForKeywords: with: (1)' runOnce: true.
 	StartupAction name: 'Keep block in message' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #keepBlockInMessage: with: (true)' runOnce: true.
 	StartupAction name: 'Line up block brackets' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #lineUpBlockBrackets: with: (false)' runOnce: true.
-	StartupAction name: 'Method signature on multiple lines' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #methodSignatureOnMultipleLines: with: (false)' runOnce: true.
+	StartupAction name: 'Method signature on multiple lines' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #methodSignatureOnMultipleLines: with: (false)' runOnce: true }.
+
+StartupLoader default executeAtomicItems: {
 	StartupAction name: 'Max line length' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #maxLineLength: with: (120)' runOnce: true.
 	StartupAction name: 'One line messages' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #oneLineMessages: with: (''#(#to: #to:do: #to:by: #to:by:do:)'')' runOnce: true.
 	StartupAction name: 'Multi line messages' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #multiLineMessages: with: (''#(#ifTrue:ifFalse: #ifFalse:ifTrue: #ifTrue: #ifFalse: #on:do: #ensure: #ifCurtailed:)'')' runOnce: true.
@@ -42,7 +45,6 @@ StartupLoader default executeAtomicItems: {
 	StartupAction name: 'String inside parentheses' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #stringInsideParentheses: with: ('''')' runOnce: true.
 	StartupAction name: 'Traditional binary precedence' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #traditionalBinaryPrecedence: with: (''#(#($| $& $?) #($= $~ $< $>) #($- $+) #($* $/ $% $\) #($@))'')' runOnce: true.
 	StartupAction name: 'Use traditional binary precedence for parentheses' code: '(Smalltalk at: #RBConfigurableFormatter) perform: #useTraditionalBinaryPrecedenceForParentheses: with: (true)' runOnce: true.
-	StartupAction name: 'Formatter' code: '(Smalltalk at: #RBProgramNode) perform: #formatterClass: with: (RBConfigurableFormatter)' runOnce: true.
 	StartupAction name: 'Undo size' code: '(Smalltalk at: #RBRefactoryChangeManager) perform: #undoSize: with: (20)' runOnce: true.
 	StartupAction name: 'Maximum size of the methods list' code: '((Smalltalk at: #RecentMessageList) perform: #uniqueInstance) perform: #maxListSize: with: (100)' runOnce: true.
 	StartupAction name: 'Use as a Set' code: '((Smalltalk at: #RecentMessageList) perform: #uniqueInstance) perform: #useAsASet: with: (false)' runOnce: true.

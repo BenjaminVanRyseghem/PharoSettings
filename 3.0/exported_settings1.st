@@ -1,5 +1,6 @@
 StartupLoader default executeAtomicItems: {
 	StartupAction name: 'Pretty print' code: '(Smalltalk at: #CodeHolder) perform: #browseWithPrettyPrint: with: (false)' runOnce: true.
+	StartupAction name: 'Show annotation pane' code: '(Smalltalk at: #CodeHolder) perform: #showAnnotationPane: with: (false)' runOnce: true.
 	StartupAction name: 'Check for slips' code: '(Smalltalk at: #ChangeSet) perform: #mustCheckForSlips: with: (true)' runOnce: true.
 	StartupAction name: 'Exhibits differences' code: '(Smalltalk at: #CodeHolder) perform: #diffsInChangeList: with: (true)' runOnce: true.
 	StartupAction name: 'Pretty print differences' code: '(Smalltalk at: #CodeHolder) perform: #diffsWithPrettyPrint: with: (false)' runOnce: true.
@@ -23,7 +24,14 @@ StartupLoader default executeAtomicItems: {
 	StartupAction name: 'Enable cmd-dot interrupt key' code: '(Smalltalk at: #UserInterruptHandler) perform: #cmdDotEnabled: with: (true)' runOnce: true.
 	StartupAction name: 'Process browser monitors CPU usage' code: '(Smalltalk at: #CPUWatcher) perform: #cpuWatcherEnabled: with: (false)' runOnce: true.
 	StartupAction name: 'Flash damaged morphic region' code: '(Smalltalk at: #WorldState) perform: #debugShowDamage: with: (false)' runOnce: true.
+	StartupAction name: 'Write message to debug log file when fall into debugger' code: '(Smalltalk at: #SpecDebugger) perform: #logDebuggerStackToFile: with: (true)' runOnce: true.
+	StartupAction name: 'Directly open the full Debugger' code: '(Smalltalk at: #SpecDebugger) perform: #alwaysOpenFullDebugger: with: (false)' runOnce: true.
+	StartupAction name: 'Filter out common message sends' code: '(Smalltalk at: #SpecDebugger) perform: #filterCommonMessageSends: with: (false)' runOnce: true }.
+
+
+StartupLoader default executeAtomicItems: {
 	StartupAction name: 'Icons in explorer' code: '(Smalltalk at: #ObjectExplorer) perform: #showIcons: with: (true)' runOnce: true.
+	StartupAction name: 'Log file name' code: '(Smalltalk at: #SpecDebugger) perform: #logFileName: with: (''PharoDebug.log'')' runOnce: true.
 	StartupAction name: 'Size of the Unselected Items History' code: '(Smalltalk at: #DialogItemsChooserUI) perform: #alreadySearchedUnselectedItemsListMaxSize: with: (15)' runOnce: true.
 	StartupAction name: 'Size of the Selected Items History' code: '(Smalltalk at: #DialogItemsChooserUI) perform: #alreadySearchedSelectedItemsListMaxSize: with: (15)' runOnce: true.
 	StartupAction name: 'Ignore line endings' code: '(Smalltalk at: #TextDiffBuilder) perform: #ignoreLineEndings: with: (true)' runOnce: true.

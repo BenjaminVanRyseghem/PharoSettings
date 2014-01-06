@@ -33,7 +33,10 @@ StartupLoader default executeAtomicItems: {
 	StartupAction name: 'Set the warning limit of source code pane' code: '(Smalltalk at: #Nautilus) perform: #warningLimit: with: (350)' runOnce: true.
 	StartupAction name: 'Exceptions' code: '(Smalltalk at: #NetworkSystemSettings) perform: #manageHttpProxyExceptions: with: ('''')' runOnce: true.
 	StartupAction name: 'Proxy authentication' code: '(Smalltalk at: #NetworkSystemSettings) perform: #useNetworkAuthentification: with: (false)' runOnce: true.
-	StartupAction name: 'User name' code: '(Smalltalk at: #NetworkSystemSettings) perform: #proxyUser: with: ('''')' runOnce: true.
+	StartupAction name: 'User name' code: '(Smalltalk at: #NetworkSystemSettings) perform: #proxyUser: with: ('''')' runOnce: true }.
+
+
+StartupLoader default executeAtomicItems: {
 	StartupAction name: 'Password' code: '(Smalltalk at: #NetworkSystemSettings) perform: #proxyPassword: with: ('''')' runOnce: true.
 	StartupAction name: 'Blab email' code: '(Smalltalk at: #NetworkSystemSettings) perform: #blabEmail: with: ('''')' runOnce: true.
 	StartupAction name: 'Use Polymorph difference tools' code: '(Smalltalk at: #PSMCPatchMorph) perform: #usedByDefault: with: (true)' runOnce: true.
