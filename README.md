@@ -1,0 +1,4 @@
+PharoSettings
+=============
+
+My pharo settings
